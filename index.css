@@ -1,0 +1,19 @@
+.categories {
+
+    padding: 2px;
+}
+.category {
+    border: 1px solid #e3f2fd;
+    box-shadow: 0 2px 4px 0 #e3f2fd;
+    margin-bottom: 8px;
+    color: #1976d2;
+}
+.category:hover {
+    background-color: rgba(227, 242, 253, 0.3);
+}
+.category a{
+    text-decoration: none;
+}
+.hide {
+    display: none;
+}
