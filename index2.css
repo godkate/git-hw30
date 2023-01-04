@@ -1,0 +1,30 @@
+li {
+    list-style-type: none;
+    border: 1px solid #c0a97a;
+    box-shadow: 0 2px 4px 0 #c0a97a;
+    margin-bottom: 8px;
+    color: black;
+    background-color: white;
+    padding: 5px;
+}
+li:hover {
+    border: 2px solid #c0a97a;
+    color: #c0a97a;
+    background: black;
+}
+img {
+    max-width: 100%;
+}
+.category-goods {
+    /*margin: 2px;*/
+    border: 1px solid #c0a97a;
+    padding: 0;
+}
+.image {
+    height: 100px;
+    text-align: center;
+    padding-top: 2px;
+}
+.details {
+    margin-bottom: 5px;
+}
