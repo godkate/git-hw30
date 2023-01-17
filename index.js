@@ -3,7 +3,7 @@ import { goods } from "./googs.js";
 const listCategories = document.querySelector('ul');
 const category = document.querySelector('.cat-content');
 const product = document.querySelector('.product-item');
-
+const modal = document.querySelector('.modal__block');
 
 Object.keys(goods).forEach((item) => {
     const listItem = document.createElement('li');
@@ -25,6 +25,29 @@ category.addEventListener('click', ({ target }) => {
         const { itemCategory } = target.closest('.category-goods').dataset;
 
         renderProduct(goods[itemCategory], id);
+    }
+});
+
+product.addEventListener('click', ({ target }) => {
+    if (target.matches('button')) {
+        modal.innerHTML = `
+        <div class="modal__window">
+        <div class="modal__content">
+        <h2>
+            Товар куплено
+        </h2>
+        <button class="ok">
+            Ok
+        </button>
+        </div>
+        </div>
+        `;
+        const buttonOk = document.querySelector('.ok');
+        buttonOk.onclick = () => {
+            modal.innerHTML = '';
+            category.innerHTML = '';
+            product.innerHTML = '';
+        }
     }
 });
 

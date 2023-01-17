@@ -39,3 +39,24 @@ img {
 .category-goods h6 {
     margin-top: 5px;
 }
+.modal__window {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000099;
+}
+.modal__content {
+    background-color: #ffffff;
+    width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.hide__modal {
+    display: none;
+}
