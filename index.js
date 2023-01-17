@@ -1,34 +1,10 @@
+import { goods } from "./googs.js";
+
 const listCategories = document.querySelector('ul');
 const category = document.querySelector('.cat-content');
 const product = document.querySelector('.product-item');
 
-const goods = {
-    laptops: [
-      {
-          name: 'Ноутбук Acer Aspire 7 Black',
-          price: '37500 ₴',
-          photo: 'https://content1.rozetka.com.ua/goods/images/big_tile/290848838.jpg',
-          id: 1,
-          category: 'laptops'
-      },
-      {
-          name: 'Ноутбук ASUS TUF Gaming F15',
-          price: '36999 ₴',
-          photo: 'https://content.rozetka.com.ua/goods/images/big_tile/285886587.jpg',
-          id: 2,
-          category: 'laptops'
-      },
-      {
-          name: 'Ноутбук Acer Aspire 5',
-          price: '21999 ₴',
-          photo: 'https://content.rozetka.com.ua/goods/images/big_tile/294138678.jpg',
-          id: 3,
-          category: 'laptops'
-      },
-    ],
-    tvs: [],
-    phones: []
-};
+
 Object.keys(goods).forEach((item) => {
     const listItem = document.createElement('li');
     listItem.innerText = `${item}`;
@@ -49,15 +25,13 @@ category.addEventListener('click', ({ target }) => {
         const { itemCategory } = target.closest('.category-goods').dataset;
 
         renderProduct(goods[itemCategory], id);
-
-
-
     }
 });
 
 
 function renderGoods (goods) {
     category.innerHTML = '';
+    product.innerHTML = '';
     goods.forEach(({ name, photo, price, id, category: cat }) => {
         const categoryGood = document.createElement('div');
         categoryGood.dataset.id = id;
